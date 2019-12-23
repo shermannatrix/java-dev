@@ -51,7 +51,6 @@
       <change afterPath="$PROJECT_DIR$/../MyShapesFXML/out/production/MyShapesFXML/sample/Styles.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../MyShapesFXML/out/production/MyShapesFXML/sample/sample.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../MyShapesFXML/src/sample/Styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -61,8 +60,12 @@
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PersonUIExample.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/models/SampleData.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vm-options.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloModernWorld/out/production/HelloModernWorld/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloModernWorld/out/production/HelloModernWorld/sample/Main.class" afterDir="false" />
@@ -119,6 +122,13 @@
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -150,6 +160,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="C:/javafx-sdk-11.0.2/lib" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -258,7 +274,8 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1577073320546" duration="66000" />
+      <workItem from="1577073320546" duration="2263000" />
+      <workItem from="1577080381822" duration="1132000" />
     </task>
     <servers />
   </component>
@@ -282,9 +299,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1264" y="281" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1577073386024" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+    <state x="1389" y="422" key="com.intellij.ide.util.TipDialog" timestamp="1577080382372">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1389" y="422" key="com.intellij.ide.util.TipDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1577080382372" />
   </component>
 </project>
