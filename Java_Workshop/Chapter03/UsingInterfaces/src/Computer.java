@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
-
 public interface Computer {
+	public String getDeviceType();
+	public String getSpeed();
 }
