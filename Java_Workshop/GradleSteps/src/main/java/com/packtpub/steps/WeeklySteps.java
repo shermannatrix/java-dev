@@ -1,9 +1,7 @@
 package com.packtpub.steps;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.*;
+import java.util.*;
 
 public class WeeklySteps {
 	List<Steps> dailySteps = new ArrayList<> ();
@@ -25,58 +23,85 @@ public class WeeklySteps {
 		this.dailyGoal = dailyGoal;
 	}
 	
-	public DayOfWeek bestDay() {
+	public DayOfWeek bestDay () {
 		DayOfWeek best = DayOfWeek.MONDAY;
 		
 		int max = 0;
-		for (Steps steps : dailySteps) {
-			if (steps.getSteps() > max) {
-				max = steps.getSteps();
-				best = steps.getDate().getDayOfWeek ();
+		for ( Steps steps : dailySteps ) {
+			if ( steps.getSteps () > max ) {
+				max = steps.getSteps ();
+				best = steps.getDate ().getDayOfWeek ();
 			}
 		}
 		
 		return best;
 	}
 	
-	public int getTotalSteps() {
+	public int getTotalSteps () {
 		int total = 0;
-		for (Steps steps : dailySteps) {
-			total += steps.getSteps();
+		for ( Steps steps : dailySteps ) {
+			total += steps.getSteps ();
 		}
 		
 		return total;
 	}
 	
-	public void addDailySteps(int steps, LocalDate date) {
-		dailySteps.add(new Steps(steps, date));
+	public void addDailySteps ( int steps, LocalDate date ) {
+		dailySteps.add ( new Steps ( steps, date ) );
 	}
 	
-	public String format() {
-		StringBuilder builder = new StringBuilder();
+	public String format () {
+		StringBuilder builder = new StringBuilder ();
 		
 		builder.append ( "Total steps: " )
 				.append ( getTotalSteps () )
 				.append ( "\n" );
 		
-		for (Steps steps: dailySteps) {
-			if (dailyGoal.hasMetGoal ( steps )) {
-				builder.append("YAY! ");
+		for ( Steps steps : dailySteps ) {
+			if ( dailyGoal.hasMetGoal ( steps ) ) {
+				builder.append ( "YAY! " );
 			} else {
-				builder.append("     ");
+				builder.append ( "     " );
 			}
 			
-			builder.append(steps.getDate().getDayOfWeek ());
-			builder.append(" ");
-			builder.append(steps.getSteps());
+			builder.append ( steps.getDate ().getDayOfWeek () );
+			builder.append ( " " );
+			builder.append ( steps.getSteps () );
 			
-			DayOfWeek best = bestDay();
-			if (steps.getDate().getDayOfWeek () == best) {
-				builder.append(" ***** BEST DAY!");
+			DayOfWeek best = bestDay ();
+			if ( steps.getDate ().getDayOfWeek () == best ) {
+				builder.append ( " ***** BEST DAY!" );
 			}
-			builder.append("\n");
+			builder.append ( "\n" );
 		}
 		
-		return builder.toString();
+		return builder.toString ();
+	}
+	
+	public static void main ( String[] args ) {
+		// Initialize sample data
+		DailyGoal dailyGoal = new DailyGoal ( 10000 );
+		WeeklySteps weekly = new WeeklySteps ();
+		weekly.setDailyGoal ( dailyGoal );
+		
+		int year = 2021;
+		int month = 1;
+		int day = 4;
+		
+		weekly.addDailySteps ( 11543, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 12112, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 10005, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 10011, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 9000, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 20053, LocalDate.of ( year, month, day ) );
+		day++;
+		weekly.addDailySteps ( 20048, LocalDate.of ( year, month, day ) );
+		
+		System.out.println(weekly.format());
 	}
 }
