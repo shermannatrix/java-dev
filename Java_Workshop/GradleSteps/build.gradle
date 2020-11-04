@@ -1,20 +1,27 @@
 buildscript {
     repositories {
-        java()
         jcenter()
-        mavenCentral()
     }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
     }
 }
 
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
 group 'com.packtpub.steps'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 12
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.13'
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
 }
 
 jar {
@@ -22,6 +29,3 @@ jar {
         attributes 'Main-Class': 'com.packtpub.steps.WeeklySteps'
     }
 }
-
-apply plugin: 'java'
-apply plugin: 'com.github.johnrengelman.shadow'
